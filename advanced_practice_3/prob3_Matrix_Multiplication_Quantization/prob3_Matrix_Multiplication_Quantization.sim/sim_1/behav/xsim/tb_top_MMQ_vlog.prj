@@ -1,0 +1,14 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../Matrix_Multiplication_Quantization.srcs/sources_1/imports/new/Dequantize.v" \
+"../../../../Matrix_Multiplication_Quantization.srcs/sources_1/imports/new/MAC.v" \
+"../../../../Matrix_Multiplication_Quantization.srcs/sources_1/imports/new/Quantize.v" \
+"../../../../../../advanced_practice3/Simple_Controller/Simple_Controller.srcs/sources_1/new/single_port_bram.v" \
+"../../../../Matrix_Multiplication_Quantization.srcs/sources_1/new/top_MMQ.v" \
+"../../../../Matrix_Multiplication_Quantization.srcs/sim_1/new/tb_top_MMQ.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Thu Sep  4 17:18:11 2025
+# Process ID: 20296
+# Current directory: D:/DSD2025/advanced_practice_1/prob3_2stg_GEMM_GEMV
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent30052 D:\DSD2025\advanced_practice_1\prob3_2stg_GEMM_GEMV\2stg_GEMM_GEMV.xpr
+# Log file: D:/DSD2025/advanced_practice_1/prob3_2stg_GEMM_GEMV/vivado.log
+# Journal file: D:/DSD2025/advanced_practice_1/prob3_2stg_GEMM_GEMV\vivado.jou
+# Running On: DESKTOP-INFKKCG, OS: Windows, CPU Frequency: 1498 MHz, CPU Physical cores: 4, Host memory: 16930 MB
+#-----------------------------------------------------------
+start_gui
+open_project D:/DSD2025/advanced_practice_1/prob3_2stg_GEMM_GEMV/2stg_GEMM_GEMV.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config D:/DSD2025/advanced_practice_1/prob3_2stg_GEMM_GEMV/tb_top_behav.wcfg
+source tb_top.tcl
+close_sim

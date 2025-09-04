@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/DSD2025/advanced_practice_1/prob1_GEMV/GEMV.srcs/sources_1/new/MAC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MAC
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/DSD2025/advanced_practice_1/prob1_GEMV/GEMV.srcs/sources_1/new/gemv.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module gemv
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/DSD2025/advanced_practice_1/prob1_GEMV/GEMV.srcs/sim_1/new/tb_gemv.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_gemv

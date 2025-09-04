@@ -1,0 +1,5 @@
+vhdl xil_defaultlib  \
+"../../../../Simple_Controller.gen/sources_1/ip/xbip_dsp48_macro_0/sim/xbip_dsp48_macro_0.vhd" \
+
+# Do not sort compile order
+nosort

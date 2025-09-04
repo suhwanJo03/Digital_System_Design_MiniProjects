@@ -1,0 +1,31 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Thu Sep  4 21:46:44 2025
+# Process ID: 25792
+# Current directory: D:/DSD2025/advanced_practice_1/prob1_GEMV
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5640 D:\DSD2025\advanced_practice_1\prob1_GEMV\GEMV.xpr
+# Log file: D:/DSD2025/advanced_practice_1/prob1_GEMV/vivado.log
+# Journal file: D:/DSD2025/advanced_practice_1/prob1_GEMV\vivado.jou
+# Running On: DESKTOP-INFKKCG, OS: Windows, CPU Frequency: 1498 MHz, CPU Physical cores: 4, Host memory: 16930 MB
+#-----------------------------------------------------------
+start_gui
+open_project D:/DSD2025/advanced_practice_1/prob1_GEMV/GEMV.xpr
+update_compile_order -fileset sources_1
+add_files -norecurse D:/DSD2025/advanced_practice_1/prob1_GEMV/GEMV.srcs/sources_1/new/MAC.v
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files D:/DSD2025/advanced_practice_1/prob1_GEMV/GEMV.srcs/sources_1/imports/new/MAC.v] -no_script -reset -force -quiet
+remove_files  D:/DSD2025/advanced_practice_1/prob1_GEMV/GEMV.srcs/sources_1/imports/new/MAC.v
+launch_simulation
+source tb_gemv.tcl
+close_sim
+launch_simulation
+source tb_gemv.tcl
+close_sim
+launch_simulation
+source tb_gemv.tcl
+relaunch_sim
+relaunch_sim
+close_sim

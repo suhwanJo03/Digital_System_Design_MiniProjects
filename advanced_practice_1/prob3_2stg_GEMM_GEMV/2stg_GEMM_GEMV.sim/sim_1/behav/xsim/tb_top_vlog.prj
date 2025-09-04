@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../2stg_GEMM_GEMV.srcs/sources_1/new/MAC_clr.v" \
+"../../../../2stg_GEMM_GEMV.srcs/sources_1/new/gemm1.v" \
+"../../../../2stg_GEMM_GEMV.srcs/sources_1/new/gemv2.v" \
+"../../../../2stg_GEMM_GEMV.srcs/sources_1/new/top.v" \
+"../../../../2stg_GEMM_GEMV.srcs/sim_1/new/tb_top.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
