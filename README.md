@@ -3,6 +3,7 @@
 This repository contains all **Advanced Practice Projects (1, 2, 3)** from the **Digital System Design (DSD25)** course.  
 The projects focus on **DSP-based hardware design**, **controller architectures**, and **quantization for neural networks** using **Verilog HDL**.
 
+| Tooling: Vivado 2023.x • Verilog HDL • Simulation in Vivado
 ---
 
 ## 📂 Repository Structure
