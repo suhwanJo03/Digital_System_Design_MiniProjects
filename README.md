@@ -23,8 +23,7 @@ Digital_System_Design_MiniProjects/
 ├── prob2_Vector_Multiplicaiton_Quantization
 └── prob3_Matrix_Multiplication_Quantization.v
 
-yaml
-코드 복사
+
 
 ---
 
