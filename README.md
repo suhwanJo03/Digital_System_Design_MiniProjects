@@ -6,6 +6,7 @@ The projects focus on **DSP-based hardware design**, **controller architectures*
 ---
 
 ## 📂 Repository Structure
+```
 Digital_System_Design_MiniProjects/
 │── Advanced_Practice_1/
 │ ├── pre_VECTOR_MUL
@@ -22,7 +23,7 @@ Digital_System_Design_MiniProjects/
 ├── prob1_Vector_Quantization
 ├── prob2_Vector_Multiplicaiton_Quantization
 └── prob3_Matrix_Multiplication_Quantization.v
-
+```
 
 
 ---
