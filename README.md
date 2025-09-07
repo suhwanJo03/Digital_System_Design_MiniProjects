@@ -3,6 +3,11 @@
 This repository contains all **Advanced Practice Projects (1, 2, 3)** from the **Digital System Design (DSD25)** course.  
 The projects focus on **DSP-based hardware design**, **controller architectures**, and **quantization for neural networks** using **Verilog HDL**.
 
+This repository includes all projects from **Advanced Practice 1, 2, and 3**.  
+Each practice has its own dedicated `README.md` file located in the corresponding subfolder.  
+
+👉 For detailed explanations of problems, design goals, block diagrams, and verification results, please refer to the `README.md` inside each practice directory.  
+
 - Tooling: Vivado 2023.1 • Verilog • Simulation in Vivado
 ---
 
@@ -17,7 +22,7 @@ Digital_System_Design_MiniProjects/
 │
 │── Advanced_Practice_2/
 │ ├── prob1_Simple_Controller
-│ ├── prob2_Recursiv_Architecture_Controller
+│ ├── prob2_Recursive_Architecture_Controller
 │ └── prob3_Streamline_Architecture_Controller
 │
 └── Advanced_Practice_3/
