@@ -5,42 +5,42 @@ The focus is on designing controllers (FSM-based, Recursive, Streamline) for vec
 
 ---
 
-## Problem 1 — Simple Controller:contentReference[oaicite:3]{index=3}
-- FSM states: **IDLE → RUN → DONE**  
-- Manages BRAM (x, w) and MAC enable.  
-- Counts 8 MAC cycles then signals completion.
-
-**Dataflow/State Diagram/Block Diagrams**  
-![Simple Controller Dataflow](docs/simple_controller_dataflow.png)
-![Simple Controller State Diagram](docs/simple_controller_sd.png)  
-![Simple Controller Block](docs/simple_controller_bd.png)  
-
----
-
-## Problem 2 — Recursive Controller:contentReference[oaicite:4]{index=4}
-- Matrix multiplication divided into **2 states**.  
-- A single PU is **reused sequentially**.  
-- Fewer resources, longer latency.
-
-**Dataflow/Block Diagram**  
-![Recursive vs Streamline Dataflow](docs/streamline_recursive_dataflow.png)
-![Recursive Controller](docs/recursive_bd.png)
+## Problem 1 — Simple Controller
+- **Functionality**: A finite state machine (FSM) controls the flow of vector multiplication.  
+- **FSM states**: **IDLE → RUN → DONE**  
+  - **IDLE**: Waits for the start signal.  
+  - **RUN**: Enables MAC operation, increments buffer addresses, and counts cycles.  
+  - **DONE**: Signals completion once 8 MAC operations are performed.  
+- **Structure**:  
+  - A top module instantiates **x_bram**, **w_bram**, **MAC.v**, and **ctrl_fsm.v**.  
+  - The controller generates control signals such as `x_en`, `w_en`, `mac_en`, and manages address counters for input BRAMs.  
+  - Accumulated MAC results are output through `acc_o`.  
 
 ---
 
-## Problem 3 — Streamline Controller:contentReference[oaicite:5]{index=5}
-- **2 Processing Units (PUs)** working in parallel.  
-- One **global controller** and **2 local controllers**.  
-- More resources, higher throughput.
+## Problem 2 — Recursive Controller
+- **Functionality**: Implements matrix multiplication in **two sequential states**, reusing a single PU (Processing Unit) across iterations.  
+- **Structure**:  
+  - The **controller** orchestrates computation by switching between `state_0` and `state_1`.  
+  - Only **one PU (MAC array)** is instantiated, which reduces hardware resource usage.  
+  - Temporary results are stored in intermediate BRAMs (`temp_bram`) before moving to the next state.  
+- **Trade-off**: Resource-efficient but incurs longer latency due to serialized execution.  
 
-**Block Diagrams**  
-![Streamline Controller](docs/streamline_bd.png)  
+---
+
+## Problem 3 — Streamline Controller
+- **Functionality**: Enhances throughput by **parallelizing operations** across two PUs.  
+- **Structure**:  
+  - Contains **two PUs** (each with its own local controller) that work independently on different stages of the matrix multiplication.  
+  - A **global controller** manages high-level sequencing, while each **local controller** coordinates its PU’s MAC operations and memory access.  
+  - Input BRAMs (`din1_bram`, `din2_bram`, `din3_bram`) are shared, but distributed control logic ensures concurrent operation.  
+- **Trade-off**: Achieves higher performance at the cost of additional hardware resources.  
 
 ---
 
 ## Verification
-- Testbenches (`tb_*.v`) were developed for each controller type.  
-- Waveforms validated FSM transitions and correct accumulation results.  
-- **STA (Static Timing Analysis)** confirmed timing closure with positive slack, ensuring stable operation of FSM and datapath modules.  
+- **Simulation**: Developed testbenches (`tb_*.v`) for all three controller architectures.  
+- **Waveform validation**: Confirmed FSM transitions, correct accumulation results, and proper memory addressing sequences.  
+- **Static Timing Analysis (STA)**: After synthesis/implementation, all designs achieved positive slack, proving successful timing closure and reliable operation.  
 
 ---
